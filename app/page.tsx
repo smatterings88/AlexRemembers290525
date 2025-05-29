@@ -235,7 +235,7 @@ export default function HomePage() {
 
       uvSession.addEventListener('error', (error) => {
         console.error('Ultravox session error:', error);
-        setError(`Connection error: ${error.message || 'Unknown error'}`);
+        setError(`Connection error: ${error?.message || 'Unknown error'}`);
         endCall();
       });
 
