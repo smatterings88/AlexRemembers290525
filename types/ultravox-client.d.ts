@@ -9,8 +9,8 @@ declare module 'ultravox-client' {
     constructor();
     
     addEventListener(
-      event: 'status' | 'transcripts' | 'end',
-      listener: () => void
+      event: 'status' | 'transcripts' | 'end' | 'error',
+      listener: (error?: { message: string }) => void
     ): void;
 
     joinCall(url: string): void;
